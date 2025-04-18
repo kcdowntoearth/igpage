@@ -16,7 +16,17 @@
     body {
       background-color: #fafafa;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      background-color: #fff;
+      border-bottom: 1px solid #dbdbdb;
     }
     .container {
       width: 100%;
@@ -74,6 +84,8 @@
     }
     .post-img {
       width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
     }
     .post-actions {
       display: flex;
@@ -120,6 +132,7 @@
   </style>
 </head>
 <body>
+  <header>Instagram</header>
   <div class="container">
     <div class="feed">
       <div class="stories" id="storyBar">
@@ -159,7 +172,7 @@
           <img src="https://i.pravatar.cc/32?u=${user}" alt="avatar">
           <span>${user}</span>
         </div>
-        <img class="post-img" src="https://source.unsplash.com/random/800x60${i}" alt="Post">
+        <img class="post-img" src="https://source.unsplash.com/random/800x800?sig=${i}" alt="Post">
         <div class="post-actions">
           <i class="fa-regular fa-heart like-btn"></i>
           <i class="fa-regular fa-comment"></i>
